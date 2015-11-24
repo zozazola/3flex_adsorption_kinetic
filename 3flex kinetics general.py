@@ -27,6 +27,9 @@ if myfile == "C3H8 298K.txt":
 x1=data[:,3]
 x1=x1/1000/60
 y1=data[:,4]
+
+fig = plt.figure()
+fig.set_size_inches(6, 4)
 plot1, = plt.plot(x1,y1,'ko', label=myfile_label)
 
 xmin1, xmax1 = x1.min(), x1.max()
@@ -43,7 +46,6 @@ ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 
 plt.legend(numpoints=1, loc='upper left', frameon=False, title=None)
-
 plt.savefig(myfile_fig1, dpi=600)
 plt.close()
 
@@ -52,6 +54,8 @@ x2=data[:,3]
 x2=x2/1000/60
 y2=data[:,22]
 
+fig = plt.figure()
+fig.set_size_inches(6, 4)
 plot2, = plt.plot(x2,y2,'ko', label = myfile_label)
 
 xmin2, xmax2 = x2.min(), x2.max()
@@ -68,7 +72,6 @@ ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 
 plt.legend(numpoints=1, loc='upper left', frameon=False, title=None)
-
 plt.savefig(myfile_fig2, dpi=600)
 plt.close()
 print("done")
